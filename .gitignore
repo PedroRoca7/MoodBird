@@ -1,0 +1,38 @@
+# Arquivos Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribuição / empacotamento
+dist/
+build/
+*.egg-info/
+
+# Ambientes virtuais
+venv/
+env/
+ENV/
+
+# IDEs e editores
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Arquivos de cache
+.cache/
+.pytest_cache/
+
+# Arquivos de log
+*.log
+
+# Arquivos de ambiente
+.env
+.env.local
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
