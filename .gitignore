@@ -36,3 +36,11 @@ ENV/
 # Arquivos de sistema
 .DS_Store
 Thumbs.db
+
+# Adicionar ao arquivo .gitignore
+meu_modelo/
+meu_modelo_distilbert/
+*.safetensors
+*.bin
+*.pt
+*.pth
