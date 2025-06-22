@@ -1,41 +1,103 @@
-# 🧠 MoodBird — Detectando Sinais de Depressão em Tweets com IA
+# Análise de Sentimentos com DistilBERT
 
-**MoodBird** é um projeto de inteligência artificial voltado para a **análise de sentimentos com foco na detecção precoce de possíveis sinais de depressão** em postagens no Twitter.
+Este projeto implementa um classificador de sentimentos utilizando o modelo DistilBERT, treinado na base de dados SST-2. O sistema é capaz de classificar textos como depressivos ou não depressivos.
 
-💬 As palavras que usamos nas redes sociais podem revelar muito sobre nosso estado emocional. MoodBird utiliza técnicas de **processamento de linguagem natural (NLP)** e **redes neurais** para analisar padrões linguísticos que podem indicar tristeza profunda, desânimo ou outros sentimentos associados à depressão.
+## Requisitos do Sistema
 
-## 🎯 Objetivo
-
-Ajudar a identificar possíveis sinais de **depressão** com base em tweets, apoiando estudos e ferramentas que contribuam para o **bem-estar mental** e possibilitem **intervenções preventivas**.
-
-## 🛠️ O que o projeto faz:
-
-- Coleta e pré-processamento de tweets  
-- Limpeza textual, remoção de *stopwords*, emojis e lematização  
-- Treinamento de modelo de IA (LSTM) para classificação de sentimentos  
-- Detecção de padrões de linguagem associados a sintomas depressivos  
-- Visualizações e métricas para avaliar o desempenho do modelo  
-
-## ⚠️ Importante
-
-Este projeto tem fins **educacionais e experimentais**.  
-**Não substitui diagnóstico médico.** Sempre procure profissionais de saúde mental para orientação adequada.
+- Python 3.8 ou superior
+- Mínimo de 4GB de RAM
+- GPU é recomendada para treinamento (opcional)
 
 ## Instalação
 
-1. Clone o repositório:
+1. Clone este repositório:
 ```bash
-git clone https://github.com/PedroRoca7/MoodBird-.git
-cd MoodBird
+git clone https://github.com/PedroRoca7/MoodBird.git
+cd https://github.com/PedroRoca7/MoodBird.gitO
 ```
 
-2. Instale as dependências (isso também baixará automaticamente os recursos do NLTK):
+2. Crie um ambiente virtual Python:
 ```bash
-pip install -e .
+python -m venv venv
 ```
 
-Ou alternativamente:
+3. Ative o ambiente virtual:
+- No Windows:
+```bash
+venv\Scripts\activate
+```
+- No Linux/Mac:
+```bash
+source venv/bin/activate
+```
+
+4. Instale as dependências:
 ```bash
 pip install -r requirements.txt
-python setup.py
 ```
+
+## Uso do Modelo
+
+### Opção 1: Executar o Modelo Pré-treinado
+
+Para utilizar o modelo já treinado, simplesmente execute:
+```bash
+python program.py
+```
+
+O programa irá:
+- Carregar o modelo pré-treinado
+- Permitir que você digite textos para análise
+- Classificar cada texto como depressivo ou não depressivo
+- Mostrar a porcentagem de confiança da classificação
+
+Para sair do programa, digite 'sair'.
+
+### Opção 2: Treinar um Novo Modelo
+
+Se você deseja treinar o modelo novamente:
+
+1. Abra o notebook `distilBert_BaseSST_2.ipynb` usando Jupyter Notebook:
+```bash
+jupyter notebook
+```
+
+2. Execute todas as células do notebook em ordem
+
+O treinamento irá:
+- Baixar automaticamente o dataset SST-2
+- Treinar o modelo por 2 épocas
+- Salvar o modelo treinado na pasta `meu_modelo_distilbertBaseSST-2`
+
+## Estrutura do Projeto
+
+.
+├── distilBert_BaseSST_2.ipynb # Notebook para treinamento
+├── program.py # Programa para execução do modelo
+├── requirements.txt # Dependências do projeto
+├── meu_modelo_distilbertBaseSST-2/# Pasta com o modelo treinado
+│ ├── config.json
+│ ├── pytorch_model.bin
+│ └── ...
+└── README.md
+
+## Dependências Principais
+
+- transformers>=4.30.0
+- datasets>=3.6.0
+- torch>=2.0.0
+- pandas>=2.2.0
+- scikit-learn>=1.0.0
+- numpy>=1.17.0
+- huggingface-hub>=0.24.0
+
+## Notas Importantes
+
+- O modelo foi treinado para classificação binária (depressivo/não depressivo)
+- Os resultados incluem um score de confiança para cada classificação
+- O modelo está otimizado para textos em inglês
+- O treinamento pode levar alguns minutos, especialmente sem GPU
+
+## Contribuições
+
+Contribuições são bem-vindas! Por favor, sinta-se à vontade para enviar pull requests ou abrir issues para melhorias.
