@@ -1,4 +1,4 @@
-# Análise de Sentimentos com DistilBERT
+# MoodBird Análise de Sentimentos com DistilBERT
 
 Este projeto implementa um classificador de sentimentos utilizando o modelo DistilBERT, treinado na base de dados SST-2. O sistema é capaz de classificar textos como depressivos ou não depressivos.
 
