@@ -69,18 +69,6 @@ O treinamento irá:
 - Treinar o modelo por 2 épocas
 - Salvar o modelo treinado na pasta `meu_modelo_distilbertBaseSST-2`
 
-## Estrutura do Projeto
-
-.
-├── distilBert_BaseSST_2.ipynb # Notebook para treinamento
-├── program.py # Programa para execução do modelo
-├── requirements.txt # Dependências do projeto
-├── meu_modelo_distilbertBaseSST-2/# Pasta com o modelo treinado
-│ ├── config.json
-│ ├── pytorch_model.bin
-│ └── ...
-└── README.md
-
 ## ⚠️ Dependências Principais
 
 - transformers>=4.30.0
