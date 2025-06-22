@@ -1,14 +1,14 @@
-# MoodBird Análise de Sentimentos com DistilBERT
+# 🧠 MoodBird Análise de Sentimentos com DistilBERT
 
 Este projeto implementa um classificador de sentimentos utilizando o modelo DistilBERT, treinado na base de dados SST-2. O sistema é capaz de classificar textos como depressivos ou não depressivos.
 
-## Requisitos do Sistema
+## 🛠️ Requisitos do Sistema
 
 - Python 3.8 ou superior
 - Mínimo de 4GB de RAM
 - GPU é recomendada para treinamento (opcional)
 
-## Instalação
+## 🖥️ Instalação
 
 1. Clone este repositório:
 ```bash
@@ -36,7 +36,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Uso do Modelo
+## 🎯 Uso do Modelo
 
 ### Opção 1: Executar o Modelo Pré-treinado
 
@@ -81,7 +81,7 @@ O treinamento irá:
 │ └── ...
 └── README.md
 
-## Dependências Principais
+## ⚠️ Dependências Principais
 
 - transformers>=4.30.0
 - datasets>=3.6.0
