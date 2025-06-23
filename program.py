@@ -1,7 +1,24 @@
+import os
+import logging
+import warnings
+
+# Configurações para suprimir avisos
+warnings.filterwarnings('ignore')  # Ignora todos os avisos
+logging.getLogger('tensorflow').setLevel(logging.ERROR)  # Configura logging do TF para mostrar apenas erros
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # Suprime avisos do TensorFlow
+
 from transformers import pipeline
 
+# Obtém o diretório onde o arquivo program.py está localizado
+diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+
+# Constrói o caminho completo para a pasta do modelo
+caminho_modelo = os.path.join(diretorio_atual, "meu_modelo_distilbertBaseSST-2")
+
 # pipeline de classificação com modelo salvo
-classificador = pipeline("text-classification", model="./meu_modelo_distilbertBaseSST-2", tokenizer="./meu_modelo_distilbertBaseSST-2")
+classificador = pipeline("text-classification", 
+                       model=caminho_modelo, 
+                       tokenizer=caminho_modelo)
 
 def analisar_texto(texto):
     resultado = classificador(texto)
