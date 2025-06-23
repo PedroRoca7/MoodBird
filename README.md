@@ -13,7 +13,7 @@ Este projeto implementa um classificador de sentimentos utilizando o modelo Dist
 1. Clone este repositório:
 ```bash
 git clone https://github.com/PedroRoca7/MoodBird.git
-cd https://github.com/PedroRoca7/MoodBird.git
+cd MoodBird
 ```
 
 2. Crie um ambiente virtual Python:
